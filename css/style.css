@@ -1,0 +1,24 @@
+* {
+    font-family: arial;
+    margin: auto;
+    text-align: center;
+}
+
+td {
+    border-style: solid;
+    border-size: 1px;
+    position: center;
+}
+
+img:hover {
+    filter: brightness(120%);
+    transform: scale(1.1);
+}
+
+#bigPhoto {
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 100px;
+}
+
