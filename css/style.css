@@ -7,18 +7,44 @@
 td {
     border-style: solid;
     border-size: 1px;
-    position: center;
+}
+
+h1 {
+    grid-row: 1;
+    grid-column: 1/4;
+}
+
+#photos {
+    grid-row: 2;
+    grid-column: 1/4;
 }
 
 img:hover {
     filter: brightness(120%);
-    transform: scale(1.1);
 }
 
-#bigPhoto {
-    position: relative;
-    display: block;
-    margin: auto;
-    padding: 100px;
+#random {
+    grid-row: 3;
+    grid-column: 2/2;
+}
+
+#larrow {
+    grid-row: 3;
+    grid-column: 1/1;
+    width: 64px;
+    height: 64px;
+}
+
+#rarrow {
+    grid-row: 3;
+    grid-column: 3/3;
+    width: 64px;
+    height: 64px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr;
 }
 
