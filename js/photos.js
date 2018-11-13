@@ -51,7 +51,6 @@ function photos(photos) {
     let column = createPhotoColumn(i);
     row.appendChild(column);
   }
-  console.log(row);
   tabla.appendChild(row);
     
   // agregamos las flechas 
@@ -91,7 +90,7 @@ function createPhotoColumn(id) {
 function getCurrent(id)
 {
   for (var i = 0; i < 7 ; i++) {
-   if(photosData[i] = photosData[id]) {
+   if(photosData[i] == photosData[id]) {
      return photosData[i];
    }
   }
@@ -99,22 +98,20 @@ function getCurrent(id)
 
 function changuePhoto(selectImg) {
   let showPhoto = document.querySelector('.laImagen');
-  console.log(showPhoto);
   showPhoto.src = selectImg.src;
   showPhoto.id = selectImg.id;
 }
 
 function changueLeft() {
   let showPhoto = document.querySelector('.laImagen');
-  console.log(showPhoto);
   let currentId = showPhoto.id;
-  showPhoto.src = getPreviousc(currentId);
+  showPhoto.src = getPreviousSrc(currentId);
 }
 
 function getNextSrc(currId) {
   if(currId == photosData.length) {
-    console.log(photosData.length);
     // si es la ultima regresa 1
+    let lel = 'images/' + photosData[0].imagen;
     return 'images/' + photosData[0].imagen;
   }
 
@@ -145,4 +142,3 @@ function getPreviousSrc(currId) {
     }
   });
 }
-  
